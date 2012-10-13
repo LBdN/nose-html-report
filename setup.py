@@ -7,7 +7,7 @@ setup(
     author_email     = 'lionel.barret@gmail.com',
     packages         = ['nosehtml', 'nosehtml.tests'],
     scripts          = [],
-    #url              = 'http://pypi.python.org/pypi/Reactive/',
+    #url              = '',
     license          = 'LICENSE.txt',
     description      = 'a nose plugin that create a report in html (based on a jinja template).',
     long_description = open('README.md').read(),

@@ -7,12 +7,12 @@ setup(
     author_email     = 'lionel.barret@gmail.com',
     packages         = ['nosehtml', 'nosehtml.tests'],
     scripts          = [],
-    #url              = '',
+    url              = '',
     license          = 'LICENSE.txt',
     description      = 'a nose plugin that create a report in html (based on a jinja template).',
     long_description = open('README.md').read(),
     install_requires = [ ],
-    entry_points = { 'nose.plugins': [ 'nosehtml = nosehtml:HTMLReport' ]
+    entry_points = { 'nose.plugins': [ 'nosehtml = nosehtml:HtmlReport' ]
         },
     classifiers=[
     'Development Status :: 3 - Alpha',

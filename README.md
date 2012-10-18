@@ -8,6 +8,7 @@ A nose plugin that collects test results and passes their results into a jinja t
 
 Requirements
 ------------
+- jinja2-2.6 and above
 - nose 1.2.1 and above
 - python 2.6 and above
 

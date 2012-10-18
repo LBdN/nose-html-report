@@ -12,7 +12,7 @@ setup(
     description      = 'a nose plugin that create a report in html (based on a jinja template).',
     long_description = open('README.md').read(),
     install_requires = [ ],
-    entry_points = { 'nose.plugins': [ 'nosehtml = nosehtml:HtmlReport' ]
+    entry_points = { 'nose.plugins.0.10': [ 'nosehtml = nosehtml:HtmlReport' ]
         },
     classifiers=[
     'Development Status :: 3 - Alpha',

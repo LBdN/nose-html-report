@@ -1,0 +1,1 @@
+from nosehtml import HtmlReport

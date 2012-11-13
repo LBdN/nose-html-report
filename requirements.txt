@@ -1,0 +1,6 @@
+Jinja2==2.6
+argparse==1.2.1
+distribute==0.6.24
+nose==1.2.1
+-e git+git@github.com:LBdN/nose-html-report.git@269efd31632fb12757efd31e2282bac575c6b5af#egg=nosehtml-dev
+wsgiref==0.1.2

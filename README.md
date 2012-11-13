@@ -14,7 +14,8 @@ Requirements
 
 Expected use:
 -------------
-https://gist.github.com/3867554
+for the command line, just use  nosetest --help, it should be obvious.
+for use in code, see runner.py
 
 License:
 --------

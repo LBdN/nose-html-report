@@ -21,13 +21,10 @@ class HtmlReport(Plugin):
     name = 'html-report'
     env_opt = 'NOSE_HTMLREPORT'
 
-#    def __init__(self,template_path=None):
-        #Plugin.__init__(self)
-        ##==
-        #self.html_path     = None
-        #self.template_path = None
-        #if template_path:
-            #self.html_path, self.template_path = os.path.split(os.path.abspath(template_path))
+    def __init__(self, alternative_stream=None):
+        Plugin.__init__(self)
+        #==
+        self.alternative_stream = alternative_stream
 
 
     def help(self):
@@ -45,11 +42,11 @@ class HtmlReport(Plugin):
                              default= html_path / default_template,
                              dest="template_file",
                              help="jinja template used to output HTML ")
-        parser.add_option("--html-open-browser",
-                             action="store_true",
-                             default=False,
-                             dest="open_browser",
-                             help="open browser on test run (works only on linux, for now)")
+#        parser.add_option("--html-open-browser",
+                             #action="store_true",
+                             #default=False,
+                             #dest="open_browser",
+                             #help="open browser on test run (works only on linux, for now)")
     
     def configure(self, options, config):
         Plugin.configure(self, options, config)
@@ -60,7 +57,7 @@ class HtmlReport(Plugin):
         self.report_path   = options.report_file
         if options.template_file:
             self.html_path, self.template_path = os.path.split(options.template_file)
-        self.open_browser  = options.open_browser
+        #self.open_browser  = options.open_browser
 
     def begin(self):
         """start the report"""
@@ -115,6 +112,8 @@ class HtmlReport(Plugin):
         html = self.template.render(self.context)
         self.stream.write(html)
         self.stream.close()
+        #== 
+        self.alternative_stream.write(html)
 
     def setOutputStream(self, stream):
         # grab for own use

@@ -113,7 +113,8 @@ class HtmlReport(Plugin):
         self.stream.write(html)
         self.stream.close()
         #== 
-        self.alternative_stream.write(html)
+        if self.alternative_stream:
+            self.alternative_stream.write(html)
 
     def setOutputStream(self, stream):
         # grab for own use
